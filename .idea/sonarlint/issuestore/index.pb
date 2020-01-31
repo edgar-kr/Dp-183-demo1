@@ -21,3 +21,5 @@ d
 4src/org/softserve/dp183/demo1/task1/TableDrawer.java,7\3\735fe14030eb4ef6754c84708b0e7d7c2ea41862
 ^
 .src/org/softserve/dp183/demo1/task1/Task1.java,4\4\446c666e31a7ef30812eb0856592e0bea6ec7f4c
+9
+	demo1.iml,e\3\e3f64cbdd84e708e040b45fff75f12d967c0ce9a
