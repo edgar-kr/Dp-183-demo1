@@ -29,6 +29,4 @@ public class ChessTable {
     public int getLength() {
         return length;
     }
-
-
 }

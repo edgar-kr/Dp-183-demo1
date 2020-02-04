@@ -24,7 +24,8 @@ public class Triangle implements Comparable<Triangle> {
     }
 
     public double getAreaHeron() {
-        return Math.sqrt(getSemiPer() * (getSemiPer() - side1) * (getSemiPer() - side2) * (getSemiPer() - side3));
+        double semiPer = getSemiPer();
+        return Math.sqrt(semiPer * (semiPer - side1) * (semiPer - side2) * (semiPer - side3));
     }
 
     private double getSemiPer() {

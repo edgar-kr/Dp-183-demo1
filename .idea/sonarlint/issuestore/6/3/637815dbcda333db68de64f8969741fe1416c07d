@@ -1,19 +1,18 @@
 
 T
-squid:S106"9Replace this use of System.out or System.err by a logger.(¢ÑÛôûÿÿÿÿ
-V
-squid:S106J"9Replace this use of System.out or System.err by a logger.(ÊÉô¸8ÂÚ¦Äÿ-
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­Ãôª
-T
 squid:S106#"9Replace this use of System.out or System.err by a logger.(ìÉÎäûÿÿÿÿ
-T
-squid:S106+"9Replace this use of System.out or System.err by a logger.(ó¥«šúÿÿÿÿ
-–squid:S1319"sThe return type of this method should be an interface such as "SortedSet" rather than the implementation "TreeSet".(×±¥°þÿÿÿÿ8¾ÐŠ¶ÿ-
-O
-squid:S106%"9Replace this use of System.out or System.err by a logger.(„’ïÜ
 T
 squid:S106'"9Replace this use of System.out or System.err by a logger.(©þêÜúÿÿÿÿ
 T
+squid:S106*"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ
+V
+squid:S106J"9Replace this use of System.out or System.err by a logger.(ÊÉô¸8ÂÚ¦Äÿ-
+T
 squid:S106."9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ
 T
-squid:S106*"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ
+squid:S106"9Replace this use of System.out or System.err by a logger.(¢ÑÛôûÿÿÿÿ
+–squid:S1319"sThe return type of this method should be an interface such as "SortedSet" rather than the implementation "TreeSet".(×±¥°þÿÿÿÿ8¾ÐŠ¶ÿ-
+T
+squid:S106+"9Replace this use of System.out or System.err by a logger.(ó¥«šúÿÿÿÿ
+O
+squid:S106%"9Replace this use of System.out or System.err by a logger.(„’ïÜ

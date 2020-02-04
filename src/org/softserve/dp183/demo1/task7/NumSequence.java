@@ -1,29 +1,27 @@
 package org.softserve.dp183.demo1.task7;
 
-import java.util.StringJoiner;
+import java.util.ArrayList;
+
 
 /**
  * Created by User on 29.01.2020.
  */
-public class NumSequence {
-    private int n;
-    private StringJoiner sequence;
+class NumSequence {
+    private ArrayList<Integer> sequence;
+    private int param;
 
-    public NumSequence(int n) {
-        this.n = n;
+    NumSequence(int param) {
+        this.param = param;
+        this.sequence = new ArrayList<>();
     }
 
-    private void addNumbers(int n) {
-        int lastNumb = (int) Math.sqrt(n);
-        sequence = new StringJoiner(",");
+    ArrayList<Integer> getSequence() {
+        int lastNumb = (int) Math.sqrt(param);
 
         for (int i = 1; i <= lastNumb; i++) {
-            sequence.add(Integer.toString(i));
+            sequence.add(i);
         }
-    }
 
-    public void printSequence() {
-        addNumbers(n);
-        System.out.println(sequence);
+        return sequence;
     }
 }

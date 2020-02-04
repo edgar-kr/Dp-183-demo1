@@ -12,6 +12,19 @@ public class EnvelopeComparator {
         this.env2 = env2;
     }
 
+    public boolean compare() {
+        boolean result = false;
+
+        switchSides(env1);
+        switchSides(env2);
+
+        if ((env1.getSide1() <= env2.getSide1() && env1.getSide2() <= env2.getSide2()) ||
+                (env1.getSide1() >= env2.getSide1() && env1.getSide2() >= env2.getSide2())) {
+            result = true;
+        }
+        return result;
+    }
+
     private void switchSides(Envelope env) {
         if (env.getSide1() > env.getSide2()) {
             double temp = env.getSide1();
@@ -20,18 +33,16 @@ public class EnvelopeComparator {
         }
     }
 
-    private boolean compare() {
-        switchSides(env1);
-        switchSides(env2);
+    public boolean compareTo() {
+        double sideA1;
+        double sideA2;
+        double sideB1;
+        double sideB2;
+        if (env1.getSide1() > env1.getSide1()) {
+            sideA1 = env1.getSide1();
+        }
 
-        if (env1.getSide1() <= env2.getSide1() &&
-                env1.getSide2() <= env2.getSide2())
-            return true;
-        else return false;
-    }
 
-    public void envCompare() {
-        String canFit = compare() ? "can" : "can't";
-        System.out.printf("Envelope1 %s fit Envelope2", canFit);
+        return false;
     }
 }
