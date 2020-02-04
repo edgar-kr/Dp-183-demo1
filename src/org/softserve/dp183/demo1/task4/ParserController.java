@@ -11,7 +11,7 @@ public class ParserController {
     void work(String[] args) {
         try {
             DataValidator validator = new DataValidator(args);
-            validator.validateParams();
+            validator.validateData();
 
             File file = new File(args[0]);
 

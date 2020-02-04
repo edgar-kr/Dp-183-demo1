@@ -13,14 +13,18 @@ class DataValidator {
         this.args = args;
     }
 
-    boolean validateCount() throws NotEnoughParamsException {
+    boolean validateData() throws FileNotFoundException, NotEnoughParamsException {
+        validateCount();
+        validateParams();
+        return true;
+    }
+
+    private boolean validateCount() throws NotEnoughParamsException {
         if (args.length < 2) throw new NotEnoughParamsException();
         return true;
     }
 
-    boolean validateParams() throws NotEnoughParamsException, FileNotFoundException {
-        validateCount();
-
+    private boolean validateParams() throws FileNotFoundException {
         File file = new File(args[0]);
         if (!file.exists()) throw new FileNotFoundException();
 
