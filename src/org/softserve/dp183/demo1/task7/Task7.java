@@ -5,6 +5,10 @@ package org.softserve.dp183.demo1.task7;
  */
 public class Task7 {
     public static void main(String[] args) {
-        new TaskController(args).work();
+        String str="5,2";
+        int x=Integer.parseInt(str);
+        System.out.println(x);
+
+        //new TaskController(args).work();
     }
 }

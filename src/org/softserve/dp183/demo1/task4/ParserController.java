@@ -15,7 +15,7 @@ public class ParserController {
 
             File file = new File(args[0]);
 
-            if (validator.paramsCount() == 2) {
+            if (args.length == 2) {
                 EntryParser entryParser = new EntryParser(file, args[1]);
                 entryParser.printEntries();
             } else {
