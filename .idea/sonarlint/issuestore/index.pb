@@ -23,8 +23,6 @@ Bsrc/org/softserve/dp183/demo1/task3/TriangleCreationException.java,e\3\e3827f5
 	demo1.iml,e\3\e3f64cbdd84e708e040b45fff75f12d967c0ce9a
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
-^
-.src/org/softserve/dp183/demo1/task5/task5.java,b\7\b75872a5a082c9eab3102f8370e4bfcf4a2876c7
 d
 4src/org/softserve/dp183/demo1/task7/NumSequence.java,4\7\47aac47b66dd989eeb6cd7b5a54dafc35471d1a0
 f
@@ -59,3 +57,15 @@ f
 6src/org/softserve/dp183/demo1/task4/ReplaceParser.java,f\e\fec960fea5fefc7b8758cba70efdaf109f585602
 d
 4src/org/softserve/dp183/demo1/task4/EntryParser.java,8\9\89b4f5b486a61872e5c6d54d5e0b3cb3dc09dcbd
+g
+7src/org/softserve/dp183/demo1/task7/ParamValidator.java,1\a\1adb382b7fd22fa62af38925d6b86c856c990f0a
+r
+Bsrc/org/softserve/dp183/demo1/task3/WrongParamsCountException.java,0\6\06d5aef8f8db395a0a1baf2af679640cc07c77cf
+p
+@src/org/softserve/dp183/demo1/task3/TriangleExistsException.java,3\6\3644b89f721a4ffde14f3841e1ca6bd26bb91039
+j
+:src/org/softserve/dp183/demo1/task3/TriangleValidator.java,a\d\ade74f66e52c1b1e7a8d46d37da462e1fa583a78
+q
+Asrc/org/softserve/dp183/demo1/task4/NotEnoughParamsException.java,f\5\f546fed4826d68afe632424ea4f8c37edb437fec
+k
+;src/org/softserve/dp183/demo1/task3/TriangleController.java,d\4\d4c0c9770d3b85595661f3c0e7be8289fbababd5

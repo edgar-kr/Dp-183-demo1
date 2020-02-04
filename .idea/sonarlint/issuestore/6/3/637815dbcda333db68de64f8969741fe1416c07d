@@ -1,18 +1,4 @@
 
-T
-squid:S106#"9Replace this use of System.out or System.err by a logger.(ìÉÎäûÿÿÿÿ
-T
-squid:S106'"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ
-T
-squid:S106*"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
-V
-squid:S106J"9Replace this use of System.out or System.err by a logger.(ÊÉô¸8ÂÚ¦Äÿ-
-T
-squid:S106."9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(¢ÑÛôûÿÿÿÿ
-–squid:S1319"sThe return type of this method should be an interface such as "SortedSet" rather than the implementation "TreeSet".(×±¥°şÿÿÿÿ8¾ĞŠ¶ÿ-
-T
-squid:S106+"9Replace this use of System.out or System.err by a logger.(ó¥«šúÿÿÿÿ
-O
-squid:S106%"9Replace this use of System.out or System.err by a logger.(„’ïÜ
+asquid:UselessImportCheck"6Remove this unused import 'java.io.InputStreamReader'.(ãˆÎÉ8ã˜ë.
+`squid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8ĞéÒƒ.
+^squid:UselessImportCheck"3Remove this unused import 'java.io.BufferedReader'.(€é²Å8ã˜ë.
