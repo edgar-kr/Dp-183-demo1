@@ -1,7 +1,6 @@
 package org.softserve.dp183.demo1.task4;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 
 /**
  * Created by User on 03.02.2020.
@@ -13,21 +12,13 @@ class DataValidator {
         this.args = args;
     }
 
-    boolean validateData() throws FileNotFoundException, NotEnoughParamsException {
-        validateCount();
-        validateParams();
-        return true;
+    public void validateCount() throws NotEnoughParamsException {
+        if (args.length < 2) throw new NotEnoughParamsException("Not enough params");
     }
 
-    private boolean validateCount() throws NotEnoughParamsException {
-        if (args.length < 2) throw new NotEnoughParamsException();
-        return true;
-    }
-
-    private boolean validateParams() throws FileNotFoundException {
+    public File validateFile() throws FileDoesNotExistException {
         File file = new File(args[0]);
-        if (!file.exists()) throw new FileNotFoundException();
-
-        return true;
+        if (!file.exists()) throw new FileDoesNotExistException("This file doesn't exist");
+        return file;
     }
 }

@@ -16,7 +16,7 @@ class EntryParser {
         this.parseStr = parseStr;
     }
 
-    private int getEntries() {
+    private int getEntries() throws IOException {
         int entries = 0;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
@@ -30,14 +30,12 @@ class EntryParser {
                     entries++;
                 }
             }
-        } catch (IOException e) {
-            System.out.println("Wrong file path");
         }
 
         return entries;
     }
 
-    void printEntries() {
-        System.out.printf("String %s was matched in file %d times", parseStr, getEntries());
+    void printEntries() throws IOException {
+        System.out.printf("String \"%s\" was matched in file %d times", parseStr, getEntries());
     }
 }

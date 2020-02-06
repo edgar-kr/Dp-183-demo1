@@ -61,8 +61,6 @@ g
 7src/org/softserve/dp183/demo1/task7/ParamValidator.java,1\a\1adb382b7fd22fa62af38925d6b86c856c990f0a
 r
 Bsrc/org/softserve/dp183/demo1/task3/WrongParamsCountException.java,0\6\06d5aef8f8db395a0a1baf2af679640cc07c77cf
-p
-@src/org/softserve/dp183/demo1/task3/TriangleExistsException.java,3\6\3644b89f721a4ffde14f3841e1ca6bd26bb91039
 j
 :src/org/softserve/dp183/demo1/task3/TriangleValidator.java,a\d\ade74f66e52c1b1e7a8d46d37da462e1fa583a78
 q

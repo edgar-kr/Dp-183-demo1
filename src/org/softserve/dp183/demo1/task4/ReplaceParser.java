@@ -19,33 +19,29 @@ public class ReplaceParser {
         fileList = new ArrayList<>();
     }
 
-    void parseFile() {
+    void parseFile() throws IOException {
         readFile();
         writeFile();
         System.out.println("File was parsed");
     }
 
-    private void readFile() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            String str = "";
+    private void readFile() throws IOException {
+        String str = "";
 
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             while (reader.ready()) {
                 str = reader.readLine();
                 fileList.add(str.replace(oldStr, newStr));
             }
-        } catch (IOException e) {
-            System.out.println("Wrong file path");
         }
     }
 
-    private void writeFile() {
+    private void writeFile() throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             for (String str : fileList) {
                 writer.write(str);
                 writer.newLine();
             }
-        } catch (IOException e) {
-            System.out.println("Wrong file path");
         }
     }
 }

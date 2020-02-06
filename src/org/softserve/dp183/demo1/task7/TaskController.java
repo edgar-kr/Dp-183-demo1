@@ -13,9 +13,10 @@ class TaskController {
     void work() {
         try {
             ParamValidator validator = new ParamValidator(args);
-            validator.validate();
+            int param = validator.validateParam();
 
-            NumSequence numSequence = new NumSequence(Integer.parseInt(args[0]));
+            NumSequence numSequence = new NumSequence(param);
+
             PrintSequence printSequence = new PrintSequence(numSequence);
             printSequence.print();
         } catch (WrongParameterException | NumberFormatException e) {

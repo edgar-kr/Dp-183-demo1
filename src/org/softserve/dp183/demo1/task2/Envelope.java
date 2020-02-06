@@ -3,7 +3,7 @@ package org.softserve.dp183.demo1.task2;
 /**
  * Created by User on 28.01.2020.
  */
-public class Envelope implements Comparable<Envelope>{
+public class Envelope {
     private double side1;
     private double side2;
 
@@ -28,8 +28,11 @@ public class Envelope implements Comparable<Envelope>{
         return side2;
     }
 
-    @Override
-    public int compareTo(Envelope anotherEnv) {
-        return 1;
+    public double getBigSide() {
+        return (side1 > side2) ? side1 : side2;
+    }
+
+    public double getSmallSide() {
+        return (side1 < side2) ? side1 : side2;
     }
 }

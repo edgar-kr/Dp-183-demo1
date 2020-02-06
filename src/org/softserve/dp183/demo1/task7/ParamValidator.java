@@ -10,11 +10,11 @@ class ParamValidator {
         this.args = args;
     }
 
-    boolean validate() throws WrongParameterException {
+    int validateParam() throws WrongParameterException {
         int param = Integer.parseInt(args[0]);
 
         if (param <= 0) throw new WrongParameterException();
 
-        return true;
+        return param;
     }
 }

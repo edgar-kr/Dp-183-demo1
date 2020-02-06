@@ -2,21 +2,20 @@ package org.softserve.dp183.demo1.task2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created by User on 03.02.2020.
  */
-public class EnvValidator {
+class EnvValidator {
     private BufferedReader reader;
-    private ArrayList<Double> list;
 
-    public EnvValidator(BufferedReader reader) {
+    EnvValidator(BufferedReader reader) {
         this.reader = reader;
-        list = new ArrayList<>();
     }
 
-    public ArrayList<Double> validateEnvSides() {
+    double[] validateEnvSides() throws IOException {
+        double[] params = new double[4];
+
         for (int i = 0; i < 4; i++) {
             if (i % 2 == 0) {
                 EnvMessage.askEnvelope();
@@ -26,25 +25,32 @@ public class EnvValidator {
                 try {
                     EnvMessage.askSide();
 
-                    double side = parseSide();
-                    list.add(side);
+                    params[i] = valSide();
 
                     EnvMessage.incrementSideCount();
 
                     break;
-                } catch (WrongSideException | NumberFormatException | IOException e) {
+                } catch (WrongSideException | NumberFormatException e) {
                     System.out.println("Please enter natural number");
                 }
             }
         }
 
-        return list;
+        return params;
     }
 
-    private double parseSide() throws WrongSideException, IOException {
+    boolean validateStop() throws IOException {
+        EnvMessage.askOnceMore();
+
+        String message = reader.readLine();
+
+        return !(message.equalsIgnoreCase("y") || message.equalsIgnoreCase("yes"));
+    }
+
+    private double valSide() throws WrongSideException, IOException {
         double result = Double.parseDouble(reader.readLine());
 
-        if (result <= 0) throw new WrongSideException("You must enter natural number");
+        if (result <= 0) throw new WrongSideException();
 
         return result;
     }
