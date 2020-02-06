@@ -5,8 +5,7 @@ package org.softserve.dp183.demo1.task8;
  */
 public class task8 {
     public static void main(String[] args) {
-        FibonacciNumbers num=new FibonacciNumbers();
-        System.out.println(num.countDigits(45555));
-        System.out.println(new FibonacciNumbers().fibonacci());
+        FibonacciSequence sequence=new FibonacciSequence();
+        System.out.println(sequence.getNumbersTask2(111,555));
     }
 }
