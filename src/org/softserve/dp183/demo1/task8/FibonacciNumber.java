@@ -19,7 +19,7 @@ public class FibonacciNumber {
             index = 1;
         }
 
-        index -= 0.00001;
+
         return (int) Math.ceil(index);
     }
 

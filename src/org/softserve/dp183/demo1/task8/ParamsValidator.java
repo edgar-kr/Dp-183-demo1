@@ -50,6 +50,7 @@ public class ParamsValidator {
 
     private long[] getNewParams() {
         Scanner scanner = new Scanner(System.in);
+
         long[] params = new long[2];
 
         for (; ; ) {

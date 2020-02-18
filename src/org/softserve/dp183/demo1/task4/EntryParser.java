@@ -1,6 +1,9 @@
 package org.softserve.dp183.demo1.task4;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,21 +12,21 @@ import java.util.regex.Pattern;
  */
 class EntryParser {
     private String parseStr;
-    private File file;
+    private Path path;
 
-    EntryParser(File file, String parseStr) {
-        this.file = file;
+    EntryParser(Path path, String parseStr) {
+        this.path = path;
         this.parseStr = parseStr;
     }
 
-    private int getEntries() throws IOException {
+    public int getEntries() throws IOException {
         int entries = 0;
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            while (reader.ready()) {
-                String line = reader.readLine();
+        try (BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
+            String line = "";
+            Pattern pattern = Pattern.compile(Pattern.quote(parseStr));
 
-                Pattern pattern = Pattern.compile(parseStr);
+            while ((line = reader.readLine()) != null) {
                 Matcher matcher = pattern.matcher(line);
 
                 while (matcher.find()) {

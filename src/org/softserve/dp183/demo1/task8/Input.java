@@ -13,7 +13,6 @@ public class Input {
         System.out.println("You can get Fibonacci sequence in 2 ways:\n" +
                 "1. Enter 1 parameter: amount of digits\n" +
                 "2. Enter interval: start and end");
-
     }
 
     public static void wrongParamsFormat() {
@@ -24,7 +23,7 @@ public class Input {
         System.out.println("Wrong number of parameters");
     }
 
-    public static void printSequence(List fibSequence) {
+    public static void printSequence(List<Long> fibSequence) {
         fibSequence.forEach(System.out::println);
     }
 }

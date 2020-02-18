@@ -2,6 +2,7 @@ package org.softserve.dp183.demo1.task8;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 /**
  * Created by User on 06.02.2020.
@@ -14,28 +15,27 @@ class FibonacciSequence {
     }
 
     List<Long> getSequence(int length) {
-        List<Long> fibList = new ArrayList<>();
 
-        int firstIndex = (length == 1) ? 1 : (fibNumber.getLastIndex(length - 1) + 1);
-        int lastIndex = fibNumber.getLastIndex(length);
-
-        for (int i = firstIndex; i <= lastIndex; i++) {
-            fibList.add(fibNumber.getFibNumberByIndex(i));
-        }
-
-        return fibList;
+        return getSequence(
+                () -> (length == 1) ? 1 : (fibNumber.getLastIndex(length - 1) + 1),
+                () -> fibNumber.getLastIndex(length));
     }
 
     List<Long> getSequence(long start, long end) {
+
+        return getSequence(
+                () -> fibNumber.getNextIndex(start),
+                () -> fibNumber.getPreviousIndex(end));
+    }
+
+    List<Long> getSequence(Supplier<Integer> start, Supplier<Integer> end) {
         List<Long> fibList = new ArrayList<>();
 
-        int firstIndex = fibNumber.getNextIndex(start);
-        int lastIndex = fibNumber.getPreviousIndex(end);
-
-        for (int i = firstIndex; i <= lastIndex; i++) {
+        for (int i = start.get(); i <= end.get(); i++) {
             fibList.add(fibNumber.getFibNumberByIndex(i));
         }
 
         return fibList;
     }
+
 }

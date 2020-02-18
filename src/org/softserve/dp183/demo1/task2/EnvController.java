@@ -3,6 +3,7 @@ package org.softserve.dp183.demo1.task2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Comparator;
 
 /**
  * Created by User on 02.02.2020.
@@ -25,7 +26,9 @@ public class EnvController {
 
                 EnvMessage.printResult(canFit);
 
-                if (validator.validateStop()) {break;}
+                if (validator.validateStop()) {
+                    break;
+                }
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());

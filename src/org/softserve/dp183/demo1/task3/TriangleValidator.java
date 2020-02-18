@@ -13,10 +13,8 @@ public class TriangleValidator {
     }
 
     boolean validateParams() throws TriangleCreationException, WrongParamsCountException {
-        validateParamCount();
-        validateSides();
+        return validateParamCount() && validateSides();
 
-        return true;
     }
 
     private boolean validateSides() throws TriangleCreationException {
@@ -28,7 +26,7 @@ public class TriangleValidator {
                 || ((side1 + side3) <= side2)
                 || ((side2 + side3) <= side1)
                 || (side1 <= 0) || (side2 <= 0) || (side3 <= 0))
-            throw new TriangleCreationException("triangle can't be created with these sides");
+            throw new TriangleCreationException();
 
         return true;
     }
