@@ -111,5 +111,15 @@ d
 4src/org/softserve/dp183/demo1/task6/LuckyTicket.java,3\0\30291de6ac63c45501384b748619b3e69a0f62d3
 c
 3src/org/softserve/dp183/demo1/task6/Controller.java,1\f\1fdc5d64d27445e389b2b3afcc01a7b6dc54d9d0
-^
-.src/org/softserve/dp183/demo1/task6/Input.java,1\5\15912627fffea39e2cf17b44cec0400ffdd3757e
+e
+5src/org/softserve/dp183/demo1/task2/InputHandler.java,e\a\ea0c2c187832dc0bc1dcd034d3f67eaa6e80001c
+e
+5src/org/softserve/dp183/demo1/task6/InputHandler.java,a\3\a3d253718b3347d23ef142cf22d2c299b4e2c283
+j
+:tests/org/softserve/dp183/demo1/task4/EntryParserTest.java,b\0\b0d384341211610996aa20ad0398b753bba7616b
+p
+@tests/org/softserve/dp183/demo1/task6/DniproLuckyTicketTest.java,9\2\921738b958c5711193ec9491e281a89ed8d5a165
+p
+@tests/org/softserve/dp183/demo1/task6/MoscowLuckyTicketTest.java,6\b\6bb3630f503927271861b9d63c65ad6e509c318c
+e
+5src/org/softserve/dp183/demo1/task4/OutputResult.java,e\a\ea8fc4c66e0f5bc7022789c0e34fb80e035cf2db

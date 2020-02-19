@@ -1,7 +1,5 @@
 package org.softserve.dp183.demo1.task6;
 
-import javafx.util.Pair;
-
 import java.util.Scanner;
 
 /**
@@ -9,7 +7,7 @@ import java.util.Scanner;
  */
 public class InputHandler {
 
-    public static Pair<Integer, Integer> getInterval() {
+    public static int[] getInterval() {
         String[] array = getStringWithTwoParams().split("[ ,]+");
 
         int start = Integer.parseInt(array[0]);
@@ -21,7 +19,7 @@ public class InputHandler {
             end = temp;
         }
 
-        return new Pair<>(start, end);
+        return new int[]{start, end};
     }
 
     private static String getStringWithTwoParams() {

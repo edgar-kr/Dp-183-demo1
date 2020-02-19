@@ -3,11 +3,11 @@ package org.softserve.dp183.demo1.task6;
 /**
  * Created by User on 14.02.2020.
  */
-public class MoscowLuckyTicket implements LuckyTicket{
+public class MoscowLuckyTicket implements LuckyTicket {
     private int digits;
 
-    public MoscowLuckyTicket(int digits) {
-        this.digits = digits;
+    public MoscowLuckyTicket() {
+        this.digits = 6;
     }
 
     public boolean isLucky(int ticket) {

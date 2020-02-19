@@ -10,11 +10,11 @@ import java.util.regex.Pattern;
 /**
  * Created by User on 03.02.2020.
  */
-class EntryParser {
+class EntryFileParser {
     private String parseStr;
     private Path path;
 
-    EntryParser(Path path, String parseStr) {
+    EntryFileParser(Path path, String parseStr) {
         this.path = path;
         this.parseStr = parseStr;
     }
@@ -36,9 +36,5 @@ class EntryParser {
         }
 
         return entries;
-    }
-
-    void printEntries() throws IOException {
-        System.out.printf("String \"%s\" was matched in file %d times", parseStr, getEntries());
     }
 }

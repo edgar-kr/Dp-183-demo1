@@ -8,7 +8,7 @@ import java.util.Map;
 public class Output {
 
     public static void requestInput() {
-        System.out.println("Please enter 2 ticket numbers(start, end):");
+        System.out.println("Please enter first and last ticket numbers with 6 digits max length:");
     }
 
     public static void wrongInput() {

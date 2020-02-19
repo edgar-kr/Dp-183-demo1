@@ -1,7 +1,5 @@
 package org.softserve.dp183.demo1.task6;
 
-import javafx.util.Pair;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,14 +9,14 @@ import java.util.Map;
 public class Controller {
 
     public void work() {
-        Pair<Integer, Integer> interval = InputHandler.getInterval();
+        int[] interval = InputHandler.getInterval();
 
         Map<LuckyTicket, Integer> luckyTickets = new HashMap<>();
-        luckyTickets.put(new MoscowLuckyTicket(6), 0);
+        luckyTickets.put(new MoscowLuckyTicket(), 0);
         luckyTickets.put(new PiterLuckyTicket(), 0);
         luckyTickets.put(new DniproLuckyTicket(), 0);
 
-        for (int i = interval.getKey(); i <= interval.getValue(); i++) {
+        for (int i = interval[0]; i <= interval[1]; i++) {
             for (Map.Entry<LuckyTicket, Integer> pair : luckyTickets.entrySet()) {
                 if (pair.getKey().isLucky(i)) {
                     luckyTickets.put(pair.getKey(), luckyTickets.get(pair.getKey()) + 1);

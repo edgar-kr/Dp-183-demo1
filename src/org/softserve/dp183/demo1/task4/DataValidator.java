@@ -1,8 +1,6 @@
 package org.softserve.dp183.demo1.task4;
 
-
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.File;
 
 /**
  * Created by User on 03.02.2020.
@@ -14,8 +12,8 @@ class DataValidator {
         return true;
     }
 
-    public static boolean validateFile(String[] args) throws FileDoesNotExistException {
-        if (Files.notExists(Paths.get(args[0]))) throw new FileDoesNotExistException("This file doesn't exist");
+    public static boolean validateFile(File fileName) throws FileDoesNotExistException {
+        if (!(fileName.exists())) throw new FileDoesNotExistException("This file doesn't exist");
 
         return true;
     }
